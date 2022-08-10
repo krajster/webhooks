@@ -1,0 +1,55 @@
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "contentUrl": null,
+            "content": {
+                "type": "AdaptiveCard",
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "version": "1.4",
+                "actions": [
+                    {
+                        "type": "Action.OpenUrl",
+                        "title": "View Rule",
+                        "id": "ViewRule",
+                        "url": "https://test.local.net/alerting/list"
+                    }
+                ],
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "[FIRING:1]  (Docker Containers Memory & Usage teams yes)",
+                        "wrap": true,
+                        "weight": "Bolder",
+                        "size": "ExtraLarge",
+                        "horizontalAlignment": "Center",
+                        "color": "Default"
+                    },
+                    {
+                        "type": "Container",
+                        "items": [
+                            {
+                                "type": "RichTextBlock",
+                                "inlines": [
+                                    {
+                                        "type": "TextRun",
+                                        "text": "*Firing*\n\nValue: [ var='B0' metric='Value' labels={container_name=grafana} value=7.7541376e+07 ]\nLabels:\n - alertname = Docker Containers Memory & Usage\n - channel = teams\n - test = yes\n\nAnnotations:\n\n\n\n\n"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Image",
+                                "url": "https://fozzy-grafana.s3.eu-central-1.amazonaws.com/3QUo8es5vUuFsDZmJ9di.png"
+                            },
+                            {
+                                "type": "Image",
+                                "url": "https://fozzy-grafana.s3.eu-central-1.amazonaws.com/3QUo8es5vUuFsDZmJ9di.png"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
